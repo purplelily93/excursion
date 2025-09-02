@@ -1,6 +1,6 @@
 /* Base */
 :root{
-  --bg: #262626;          /* Black-ish background */
+  --bg: #000000;          /* Black background */
   --text: #ffffff;        /* White */
   --muted: #9a9a9a;       /* Gray copy */
   --accent: aquamarine;   /* Link color per spec */
@@ -21,6 +21,12 @@ body{
   text-align: center;                                /* Centered text overall */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+header--main {
+  font-weight: normal;
+  font-size: 50px;
+  color: #ffffff;
 }
 
 .wrap{
