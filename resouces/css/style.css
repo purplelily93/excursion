@@ -1,0 +1,114 @@
+/* Base */
+:root{
+  --bg: #262626;          /* Black-ish background */
+  --text: #ffffff;        /* White */
+  --muted: #9a9a9a;       /* Gray copy */
+  --accent: aquamarine;   /* Link color per spec */
+  --wrap: 1160px;         /* Content max width (matches mock) */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Verdana family */
+  text-align: center;                                /* Centered text overall */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap{
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+/* Headings & text (sizes/weights per redlines) */
+h1{
+  font-weight: 400;   /* Normal */
+  font-size: 50px;    /* 50px */
+  line-height: 1.15;
+  margin: 28px 0 10px;
+}
+
+h2{
+  font-weight: 300;   /* 300 weight per spec */
+  font-size: 42px;    /* 42px */
+  line-height: 1.2;
+  margin: 40px 0 8px;
+}
+
+.lead{
+  color: var(--muted);  /* Gray */
+  font-size: 21px;      /* 21px */
+  line-height: 1.6;
+  max-width: 980px;
+  margin: 0 auto 28px;
+}
+
+/* Links */
+a.download{
+  color: var(--accent);     /* Aquamarine */
+  font-size: 16px;          /* 16px */
+  text-decoration: underline;
+}
+a.download[aria-disabled="true"]{ cursor: default; }
+
+/* Images / media blocks */
+.device{
+  margin: 26px auto 50px;
+}
+.device img{
+  display: block;
+  width: min(380px, 90vw);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 22px rgba(0,0,0,.35));
+}
+
+.hero-photo{
+  margin: 30px auto 0;
+}
+.hero-photo img{
+  width: min(100%, 980px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Coming-soon block */
+.coming{
+  margin: 56px auto 24px;
+}
+
+.phone-icon{
+  color: var(--text);   /* White icon */
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer{
+  max-width: var(--wrap);
+  margin: 64px auto 18px;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+.footer .copyright{
+  color: var(--muted);      /* Gray */
+  text-align: right;        /* Right-aligned per redline */
+  margin: 0;
+}
+
+/* Small-screen niceties */
+@media (max-width: 520px){
+  h1{ font-size: 42px; }
+  h2{ font-size: 34px; }
+}
